@@ -95,6 +95,7 @@ function fillData(jsonObject) {
         $('#inputAddress').val(data.address);
         $('#enrollmentDate').val(data.enrollmentData);
         $('#rollNo').prop('disabled', true);
+        $('#fullName').focus();
     }
 }
 
