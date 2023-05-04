@@ -45,8 +45,8 @@ function saveRecNoToLocalStorage(jsonObject) {
     localStorage.setItem('recordNo', lvData.rec_no);
 }
 
-// Function to disable all elements on page except roll number input feild
-function disableAllFeildExceptRollno() {
+// Function to disable all elements on page except roll number input field
+function disableAllFieldExceptRollno() {
     $('#fullName').prop('disabled', true);
     $('#class').prop('disabled', true);
     $('#birthDate').prop('disabled', true);
@@ -68,7 +68,7 @@ function resetForm() {
     $('#enrollmentDate').val("");
 
     $('#rollNo').prop('disabled', false);
-    disableAllFeildExceptRollno();
+    disableAllFieldExceptRollno();
     $('#rollNo').focus();
 
 
@@ -202,9 +202,9 @@ function getStudentData() {
 
 
     if ($('#rollNo').val() === "") { // if roll number is not given then disable all fields
-        disableAllFeildExceptRollno();
+        disableAllFieldExceptRollno();
     } else if ($('#rollNo').val() < 1) { // if roll number is not valid (i.e roll-no <1)
-        disableAllFeildExceptRollno();
+        disableAllFieldExceptRollno();
         alertHandler(0, 'Invalid Roll-No');
         $('#rollNo').focus();
     } else { // if roll number is valid
@@ -299,4 +299,3 @@ function changeData() {
     resetForm();
     $('#empid').focus();
 }
-
